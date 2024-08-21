@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gallery-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-button:hover {
+    color: red;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1f2b7b; /* Your preferred button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+    </style>
+    <div class="gallery">
+        <img src="img/b3.jpg" alt="Image 1" class="gallery-image" onclick="openForm('img/b3.jpg')">
+        <img src="img/b3.jpg" alt="Image 2" class="gallery-image" onclick="openForm('img/b3.jpg')">
+        <!-- Add more images as needed -->
+    </div>
+
+    <div id="formModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeForm()">&times;</span>
+            <h2>Enter Your Details</h2>
+            <form id="userForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <input type="hidden" id="selectedImage" name="selectedImage">
+                <button type="button" onclick="submitForm()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openForm(imageSrc) {
+    document.getElementById("selectedImage").value = imageSrc;
+    document.getElementById("formModal").style.display = "flex";
+}
+
+function closeForm() {
+    document.getElementById("formModal").style.display = "none";
+}
+
+function submitForm() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const imageSrc = document.getElementById("selectedImage").value;
+
+    if (name && email && phone) {
+        generatePDF(name, email, phone, imageSrc);
+    } else {
+        alert("Please fill in all the details.");
+    }
+}
+
+function generatePDF(name, email, phone, imageSrc) {
+    const { jsPDF } = window.jspdf;
+    const pdfDoc = new jsPDF();
+
+    pdfDoc.setFontSize(18);
+    pdfDoc.text(20, 20, "User Details");
+    pdfDoc.setFontSize(12);
+    pdfDoc.text(20, 30, `Name: ${name}`);
+    pdfDoc.text(20, 40, `Email: ${email}`);
+    pdfDoc.text(20, 50, `Phone: ${phone}`);
+
+    const img = new Image();
+    img.src = imageSrc;
+
+    img.onload = function () {
+        pdfDoc.addImage(img, "JPEG", 15, 60, 180, 160);
+        pdfDoc.save("gallery-image.pdf");
+        window.open(pdfDoc.output('bloburl'), '_blank');
+    };
+}
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1998,7 +1998,7 @@ h6 {
 
 .main-menu {
     padding-top: 20px;
-    border-top: 1px solid #39353e
+    border-top: 1px solid #39353e;
 }
 
 #header {
@@ -2013,7 +2013,7 @@ h6 {
 
 #header.header-scrolled {
     transition: all 0.5s;
-    background-color: rgba(34, 34, 34, 0.9)
+    background-color: #CA6014;
 }
 
 @media (max-width: 673px) {
@@ -4090,4 +4090,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     background: transparent;
     border-color: #c6b069 !important;
     color: #c6b069 !important
+}
+
+.logosizes{
+    height:80px;
+    width:100%;
+    background-color: white;
+    border-radius: 50px;
 }

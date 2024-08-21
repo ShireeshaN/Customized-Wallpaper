@@ -2168,7 +2168,7 @@ h6 {
     position: fixed;
     right: 15px;
     z-index: 999;
-    top: 18px;
+    /* top: 18px; */
     border: 0;
     background: none;
     font-size: 24px;
@@ -2179,7 +2179,7 @@ h6 {
 }
 
 #mobile-nav-toggle i {
-    color: #fff;
+    color: black;
     font-weight: 900
 }
 
@@ -2380,7 +2380,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-area {
-    background: url(../img/herobanners.png) center;
+    background: url(../img/herobanners3.png) center;
     background-size: cover
 }
 
@@ -2404,12 +2404,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .banner-content h1 {
-    color: #fff;
-    font-size: 48px;
+    background-color: rgba(202, 96, 20, 0.3); ;
+  
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+    padding-left: 10px;
     font-weight: 700;
     line-height: 1em;
     margin-top: 20px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    text-align: start;
 }
 
 @media (max-width: 414px) {
@@ -4103,4 +4108,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     width:100%;
   
  
+}
+.para{
+    text-align: start;
+    padding-left: 10px;
+    color:white;
+    font-weight: bold;
+    background-color:rgba(0, 0, 0, 0.3); 
+    
+
 }

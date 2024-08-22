@@ -4115,6 +4115,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     color:white;
     font-weight: bold;
     background-color:rgba(0, 0, 0, 0.3); 
+    border-radius: 10px;
     
 
 }

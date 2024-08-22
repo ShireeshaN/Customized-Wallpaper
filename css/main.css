@@ -2874,8 +2874,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .footer-area {
-    padding-top: 100px
+    padding-top: 100px;
+  background-color: #000;
 }
+
 
 .footer-area h6 {
     margin-bottom: 25px;
@@ -4123,4 +4125,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 .inlincolors{
     color:#CA6014;
 
+}
+
+.colorss{
+    color:#CA6014;
 }

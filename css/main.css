@@ -947,19 +947,19 @@ h6 {
 
 .genric-btn.primary {
     color: #fff;
-    background: #c6b069;
+    background: #CA6014;
     border: 1px solid transparent
 }
 
 .genric-btn.primary:hover {
-    color: #c6b069;
-    border: 1px solid #c6b069;
+    color: #CA6014;
+    border: 1px solid #CA6014;
     background: #fff
 }
 
 .genric-btn.primary-border {
     color: #c6b069;
-    border: 1px solid #c6b069;
+    border: 1px solid #CA6014;
     background: #fff
 }
 
@@ -3286,7 +3286,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .contact-page-area .single-contact-address .lnr {
     font-size: 30px;
     font-weight: 500;
-    color: #c6b069;
+    color: #CA6014;
     margin-right: 30px
 }
 

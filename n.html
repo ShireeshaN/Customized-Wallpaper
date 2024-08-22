@@ -3,173 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Form</title>
+    <title>Image Gallery</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- First Section with Border and Radio Buttons -->
-    <div class="form-container" id="form1">
-        <h2>Explore Design Ideas</h2>
-        <form id="formOne">
-            <label><input type="radio" name="service" value="Customized Wallpapers"> Customized Wallpapers</label>
-            <label><input type="radio" name="service" value="3D Blinds"> 3D Blinds</label>
-            <label><input type="radio" name="service" value="Imported Wallpapers"> Imported Wallpapers</label>
-            <label><input type="radio" name="service" value="Customized Sofas"> Customized Sofas</label>
-            <label><input type="radio" name="service" value="Customized Curtains"> Customized Curtains</label>
-            <button type="button" onclick="goToSecondForm()">Next</button>
-        </form>
+    <div class="button-container">
+        <button onclick="showImages('images1')" class="active">Button 1</button>
+        <button onclick="showImages('images2')">Button 2</button>
+        <button onclick="showImages('images3')">Button 3</button>
+        <button onclick="showImages('images4')">Button 4</button>
+        <button onclick="showImages('images5')">Button 5</button>
     </div>
 
-    <!-- Second Form Section -->
-    <div class="form-container" id="form2" style="display:none;">
-        <h2>Get a Free Estimate</h2>
-        <form id="formTwo">
-            <input type="text" id="name" name="name" placeholder="Name"><br>
-            <input type="email" id="email" name="email" placeholder="Email"><br>
-            <input type="text" id="phone" name="phone" placeholder="Phone Number"><br>
-            <button type="submit">Get Free Estimate</button>
-            <button type="button" onclick="goBack()">Back</button>
-        </form>
-    </div>
-    
+    <div class="image-gallery">
+        <div id="images1" class="image-row active">
+            <div class="image-wrapper">
+                <img src="img/b1.jpg" alt="Image 1">
+                <div class="overlay">
+                    <span class="view-more">View More</span>
+                    <a href="img/b1.jpg" download class="download-icon">&#8681;</a>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/b1.jpg" alt="Image 2">
+                <div class="overlay">
+                    <span class="view-more">View More</span>
+                    <a href="img/b1.jpg" download class="download-icon">&#8681;</a>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/b1.jpg" alt="Image 3">
+                <div class="overlay">
+                    <span class="view-more">View More</span>
+                    <a href="img/b1.jpg" download class="download-icon">&#8681;</a>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/b1.jpg" alt="Image 4">
+                <div class="overlay">
+                    <span class="view-more">View More</span>
+                    <a href="img/b1.jpg" download class="download-icon">&#8681;</a>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/b1.jpg" alt="Image 4">
+                <div class="overlay">
+                    <span class="view-more">View More</span>
+                    <a href="img/b1.jpg" download class="download-icon">&#8681;</a>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/b1.jpg" alt="Image 4">
+                <div class="overlay">
+                    <span class="view-more">View More</span>
+                    <a href="img/b1.jpg" download class="download-icon">&#8681;</a>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/b1.jpg" alt="Image 4">
+                <div class="overlay">
+                    <span class="view-more">View More</span>
+                    <a href="img/b1.jpg" download class="download-icon">&#8681;</a>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/b1.jpg" alt="Image 4">
+                <div class="overlay">
+                    <span class="view-more">View More</span>
+                    <a href="img/b1.jpg" download class="download-icon">&#8681;</a>
+                </div>
+            </div>
+        </div>
 
-    <script src="scripts.js"></script>
+
+        <div id="images2" class="image-row">
+            <div class="image-wrapper">
+                <img src="img/b2.jpg" alt="Image 5">
+                <div class="overlay">
+                    <span class="view-more">View More</span>
+                    <a href="img/b2.jpg" download class="download-icon">&#8681;</a>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/b2.jpg" alt="Image 6">
+                <div class="overlay">
+                    <span class="view-more">View More</span>
+                    <a href="img/b2.jpg" download class="download-icon">&#8681;</a>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/b2.jpg" alt="Image 7">
+                <div class="overlay">
+                    <span class="view-more">View More</span>
+                    <a href="img/b2.jpg" download class="download-icon">&#8681;</a>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="img/b2.jpg" alt="Image 8">
+                <div class="overlay">
+                    <span class="view-more">View More</span>
+                    <a href="img/b2.jpg" download class="download-icon">&#8681;</a>
+                </div>
+            </div>
+        </div>
+        <!-- Add more image rows as needed -->
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
 
 <style>
-   body {
+  body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
 }
 
-input[type="text"], input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #f0f0f0;
     border-radius: 5px;
-    border: 1px solid #ddd;
+}
+
+.button-container button.active {
+    background-color: #007BFF;
+    color: white;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-row {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-row.active {
+    display: flex;
+}
+
+.image-wrapper {
+    position: relative;
+    margin: 10px;
+    animation: fadeIn 1s ease-in-out;
+    flex-basis: calc(25% - 20px); /* Ensures four images per row */
     box-sizing: border-box;
 }
 
-input[type="text"]::placeholder, input[type="email"]::placeholder {
-    color: #888;
-}
-
-
-.form-container {
-    background-color: #CA6014;
-    border: 5px solid black;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 350px;
-    margin: auto;
-}
-
-h2 {
-    color: white;
-    text-align: center;
-}
-
-label {
-    background-color: white;
-    color: #CA6014;
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-input[type="radio"] {
-    margin-right: 10px;
-}
-
-input[type="text"], input[type="email"] {
+.image-wrapper img {
     width: 100%;
-    padding: 8px;
-    margin: 8px 0;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+    display: block;
 }
 
-button {
-    background-color: white;
-    color: #CA6014;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-button:hover {
-    background-color: #f4f4f4;
+.image-wrapper:hover .overlay {
+    opacity: 1;
 }
 
-button[type="button"] {
-    background-color: #f4f4f4;
-    color: #CA6014;
+.view-more {
+    color: #fff;
+    font-size: 14px;
 }
+
+.download-icon {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* Mobile alignment */
+@media (max-width: 768px) {
+    .image-wrapper {
+        flex-basis: 100%; /* Images take full width on mobile */
+        margin: 5px 0;
+    }
+}
+
+/* Animation for image appearance */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
 
 </style>
 
 <script>
-  function goToSecondForm() {
-    // Check if a service is selected
-    let selectedService = document.querySelector('input[name="service"]:checked');
-    if (selectedService) {
-        // If a service is selected, show the second form
-        document.getElementById("form1").style.display = "none";
-        document.getElementById("form2").style.display = "block";
-    } else {
-        // If no service is selected, alert the user
-        alert("Please select a service before proceeding.");
-    }
+    function showImages(id) {
+    var rows = document.querySelectorAll('.image-row');
+    var buttons = document.querySelectorAll('.button-container button');
+    
+    rows.forEach(row => {
+        row.classList.remove('active');
+    });
+    
+    buttons.forEach(button => {
+        button.classList.remove('active');
+    });
+    
+    document.getElementById(id).classList.add('active');
+    document.querySelector(`button[onclick="showImages('${id}')"]`).classList.add('active');
 }
-
-function goBack() {
-    // Hide the second form and show the first form again
-    document.getElementById("form2").style.display = "none";
-    document.getElementById("form1").style.display = "block";
-}
-
-document.getElementById("formTwo").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form from submitting
-
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-
-    // Name validation (only alphabets)
-    let nameRegex = /^[A-Za-z]+$/;
-    if (!nameRegex.test(name)) {
-        alert("Please enter a valid name (only alphabets).");
-        return;
-    }
-
-    // Phone number validation (only numbers and 10 digits)
-    let phoneRegex = /^\d{10}$/;
-    if (!phoneRegex.test(phone)) {
-        alert("Please enter a valid 10-digit phone number.");
-        return;
-    }
-
-    // Email validation (should end with @gmail.com)
-    let emailRegex = /^[a-zA-Z0-9._-]+@gmail\.com$/;
-    if (!emailRegex.test(email)) {
-        alert("Please enter a valid Gmail address ending with '@gmail.com'.");
-        return;
-    }
-
-    // If all validations pass, allow form submission
-    alert("Form submitted successfully!");
-    // Here you can proceed with actual form submission or further processing
-});
-
-
 
 </script>

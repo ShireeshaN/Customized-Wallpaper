@@ -2464,7 +2464,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s
+    transition: all 0.3s ease 0s;
+    background-color: #CA6014;
+    border-color: black;
+    color:black;
+    font-weight: bold;
 }
 
 .single-service h4 {
@@ -2476,8 +2480,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .single-service:hover {
-    background-color: #04091e;
-    border-color: #04091e
+    background-color: white;
+    border-color: black;
+    color:black;
+    font-weight: bold;
 }
 
 .single-service:hover h4 {

@@ -2310,7 +2310,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .primary-btn {
-    background-color: #c6b069;
+    background-color: #CA6014;
     line-height: 42px;
     padding-left: 30px;
     padding-right: 30px;
@@ -2722,9 +2722,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .callto-action-wrap {
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/call-action-bg.jpg) center;
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/call-action-bg.jpg) center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/call-action-bg.jpg) center;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/3.png) center;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/3.png) center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/banners/3.png) center;
     background-size: cover;
     border-radius: 10px;
     text-align: center;
@@ -4117,5 +4117,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-color:rgba(0, 0, 0, 0.3); 
     border-radius: 10px;
     
+
+}
+
+.inlincolors{
+    color:#CA6014;
 
 }

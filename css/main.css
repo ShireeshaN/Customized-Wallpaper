@@ -2283,7 +2283,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .section-gap {
-    padding: 120px 0
+    padding-top:0px;
+    padding: 50px 0
 }
 
 .section-title {
@@ -4129,4 +4130,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .colorss{
     color:#CA6014;
+}
+.copyright{
+    background-color:#CA6014 ;
 }

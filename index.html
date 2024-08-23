@@ -404,9 +404,47 @@ button[type="button"] {
 	<button onclick="showImages('images3')">3D Blinds</button>
 	<button onclick="showImages('images4')">Customized Sofas</button>
 	<button onclick="showImages('images5')">Customized Curtains</button>
-	<button onclick="showImages('images6')">Customer Reviews</button>
+	
+	<button class="animated-button" onclick="showImages('images6')"><spam style="background-color: white; color:#000000; border-radius: 20px; p-5">Customer Reviews</spam></button>
 </div>
+<style>
+	.animated-button {
+    background-color: #4285F4; /* Google Blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    animation: blink 1.5s infinite, shake 1s infinite alternate;
+    transition: transform 0.3s ease-in-out;
+}
 
+/* Blinking effect */
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0.5;
+    }
+}
+
+/* Shaking effect */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.animated-button:hover {
+    transform: scale(1.1); /* Slightly increases size on hover */
+}
+
+</style>
 <div class="image-gallery container">
 	<div id="images1" class="image-row active">
 		<div class="image-wrapper">
@@ -740,58 +778,116 @@ button[type="button"] {
 
 	
 	<div id="images6" class="image-row">
-		<div class="video-wrapper">
-			<iframe width="200" height="113" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
-			<div class="overlay">
-				<span class="view-more">View More</span>
-				<a href="https://www.youtube.com/watch?v=VIDEO_ID_1" download class="download-icon">&#8681;</a>
+		<section class="reviews-section">
+			<h2 class="google-heading">
+				<span class="g-blue">G</span>
+				<span class="o-red">o</span>
+				<span class="o-yellow">o</span>
+				<span class="g-blue">g</span>
+				<span class="l-green">l</span>
+				<span class="e-red">e</span>
+				Reviews
+			</h2>
+			<div class="reviews-container">
+				<div class="review-card">
+					<div class="card-header">
+						<div class="circle">A</div>
+						<div class="name-stars">
+							<h3>John Doe</h3>
+							<div class="stars">★★★★★</div>
+						</div>
+					</div>
+					<p class="review-text">
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+					</p>
+				</div>
+				<div class="review-card">
+					<div class="card-header">
+						<div class="circle">B</div>
+						<div class="name-stars">
+							<h3>Jane Smith</h3>
+							<div class="stars">★★★★★</div>
+						</div>
+					</div>
+					<p class="review-text">
+						"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+					</p>
+				</div>
+				<div class="review-card">
+					<div class="card-header">
+						<div class="circle">C</div>
+						<div class="name-stars">
+							<h3>Emily Johnson</h3>
+							<div class="stars">★★★★★</div>
+						</div>
+					</div>
+					<p class="review-text">
+						"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+					</p>
+				</div>
+				<div class="review-card">
+					<div class="card-header">
+						<div class="circle">D</div>
+						<div class="name-stars">
+							<h3>Michael Brown</h3>
+							<div class="stars">★★★★★</div>
+						</div>
+					</div>
+					<p class="review-text">
+						"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+					</p>
+				</div>
+				<div class="review-card">
+					<div class="card-header">
+						<div class="circle">E</div>
+						<div class="name-stars">
+							<h3>Chris White</h3>
+							<div class="stars">★★★★★</div>
+						</div>
+					</div>
+					<p class="review-text">
+						"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+					</p>
+				</div>
+				<div class="review-card">
+					<div class="card-header">
+						<div class="circle">F</div>
+						<div class="name-stars">
+							<h3>Anna Green</h3>
+							<div class="stars">★★★★★</div>
+						</div>
+					</div>
+					<p class="review-text">
+						"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni."
+					</p>
+				</div>
+				<div class="review-card">
+					<div class="card-header">
+						<div class="circle">G</div>
+						<div class="name-stars">
+							<h3>James Black</h3>
+							<div class="stars">★★★★★</div>
+						</div>
+					</div>
+					<p class="review-text">
+						"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+					</p>
+				</div>
+				<div class="review-card">
+					<div class="card-header">
+						<div class="circle">H</div>
+						<div class="name-stars">
+							<h3>Susan Blue</h3>
+							<div class="stars">★★★★★</div>
+						</div>
+					</div>
+					<p class="review-text">
+						"Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
+					</p>
+				</div>
 			</div>
-		</div>
-		
-		<div class="video-wrapper">
-			<iframe width="200" height="113" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
-			<div class="overlay">
-				<span class="view-more">View More</span>
-				<a href="https://www.youtube.com/watch?v=VIDEO_ID_2" download class="download-icon">&#8681;</a>
-			</div>
-		</div>
-		
-		<div class="video-wrapper">
-			<iframe width="200" height="113" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
-			<div class="overlay">
-				<span class="view-more">View More</span>
-				<a href="https://www.youtube.com/watch?v=VIDEO_ID_3" download class="download-icon">&#8681;</a>
-			</div>
-		</div>
-		
-		<div class="video-wrapper">
-			<iframe width="200" height="113" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe>
-			<div class="overlay">
-				<span class="view-more">View More</span>
-				<a href="https://www.youtube.com/watch?v=VIDEO_ID_4" download class="download-icon">&#8681;</a>
-			</div>
-		</div>
-		<div class="video-wrapper">
-			<iframe width="200" height="113" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe>
-			<div class="overlay">
-				<span class="view-more">View More</span>
-				<a href="https://www.youtube.com/watch?v=VIDEO_ID_4" download class="download-icon">&#8681;</a>
-			</div>
-		</div>
-		<div class="video-wrapper">
-			<iframe width="200" height="113" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe>
-			<div class="overlay">
-				<span class="view-more">View More</span>
-				<a href="https://www.youtube.com/watch?v=VIDEO_ID_4" download class="download-icon">&#8681;</a>
-			</div>
-		</div>
-		<div class="video-wrapper">
-			<iframe width="200" height="113" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe>
-			<div class="overlay">
-				<span class="view-more">View More</span>
-				<a href="https://www.youtube.com/watch?v=VIDEO_ID_4" download class="download-icon">&#8681;</a>
-			</div>
-		</div>
+		</section>
+	
 		
 	</div>
 

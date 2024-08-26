@@ -3,230 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Reviews Section</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Customized Wallpapers</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <style>
+        /* Your existing CSS here */
+
+        .carousel-container {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 20px; /* Adjust as needed */
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Custom styles for the carousel */
+        .slick-slide {
+            padding: 0 10px; /* Spacing between slides */
+        }
+
+        /* Mobile view adjustments */
+        @media (max-width: 768px) {
+            .carousel img {
+                border-radius: 5px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- start banner Area -->
+    <section class="banner-area relative pt-5" id="home">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row fullscreen d-flex justify-content-start align-items-center">
+                <div class="banner-content col-lg-6 col-md-12 justify-content-start">
+                    <h1>CUSTOMIZED WALLPAPERS</h1>
+                    <p class="mx-auto para">
+                        Unbeatable Quality & Unbelievable Price
+                    </p>
+                </div>	
 
-    <section class="reviews-section">
-        <h2 class="google-heading">
-            <span class="g-blue">G</span>
-            <span class="o-red">o</span>
-            <span class="o-yellow">o</span>
-            <span class="g-blue">g</span>
-            <span class="l-green">l</span>
-            <span class="e-red">e</span>
-            Reviews
-        </h2>
-        <div class="reviews-container">
-            <div class="review-card">
-                <div class="card-header">
-                    <div class="circle">A</div>
-                    <div class="name-stars">
-                        <h3>John Doe</h3>
-                        <div class="stars">★★★★★</div>
+                <div class="banner-content col-lg-6 col-md-12 justify-content-start">
+                    <div class="form-container" id="form1">
+                        <h2 class="formhead">Explore Design Ideas</h2>
+                        <form id="formOne">
+                            <label><input type="radio" name="service" value="Customized Wallpapers"> Customized Wallpapers</label>
+                            <label><input type="radio" name="service" value="3D Blinds"> 3D Blinds</label>
+                            <label><input type="radio" name="service" value="Imported Wallpapers"> Imported Wallpapers</label>
+                            <label><input type="radio" name="service" value="Customized Sofas"> Customized Sofas</label>
+                            <label><input type="radio" name="service" value="Customized Curtains"> Customized Curtains</label>
+                            <button type="button" onclick="goToSecondForm()">Next</button>
+                        </form>
                     </div>
-                </div>
-                <p class="review-text">
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                </p>
-            </div>
-            <div class="review-card">
-                <div class="card-header">
-                    <div class="circle">B</div>
-                    <div class="name-stars">
-                        <h3>Jane Smith</h3>
-                        <div class="stars">★★★★★</div>
+                
+                    <!-- Second Form Section -->
+                    <div class="form-container" id="form2" style="display:none;">
+                        <h2 class="formhead">Get a Free Estimate</h2>
+                        <form id="formTwo">
+                            <input type="text" id="name" name="name" placeholder="Name"><br>
+                            <input type="email" id="email" name="email" placeholder="Email"><br>
+                            <input type="text" id="phone" name="phone" placeholder="Phone Number"><br>
+                            <button type="submit">Get Free Estimate</button>
+                            <button type="button" onclick="goBack()">Back</button>
+                        </form>
                     </div>
-                </div>
-                <p class="review-text">
-                    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                </p>
+                </div>		
             </div>
-            <div class="review-card">
-                <div class="card-header">
-                    <div class="circle">C</div>
-                    <div class="name-stars">
-                        <h3>Emily Johnson</h3>
-                        <div class="stars">★★★★★</div>
-                    </div>
+
+            <!-- Carousel Section -->
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div><img src="image1.jpg" alt="Image 1"></div>
+                    <div><img src="image2.jpg" alt="Image 2"></div>
+                    <div><img src="image3.jpg" alt="Image 3"></div>
+                    <div><img src="image4.jpg" alt="Image 4"></div>
+                    <div><img src="image5.jpg" alt="Image 5"></div>
+                    <div><img src="image6.jpg" alt="Image 6"></div>
+                    <div><img src="image7.jpg" alt="Image 7"></div>
+                    <div><img src="image8.jpg" alt="Image 8"></div>
+                    <div><img src="image9.jpg" alt="Image 9"></div>
+                    <div><img src="image10.jpg" alt="Image 10"></div>
                 </div>
-                <p class="review-text">
-                    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-                </p>
             </div>
-            <div class="review-card">
-                <div class="card-header">
-                    <div class="circle">D</div>
-                    <div class="name-stars">
-                        <h3>Michael Brown</h3>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-                <p class="review-text">
-                    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                </p>
-            </div>
-            <div class="review-card">
-                <div class="card-header">
-                    <div class="circle">E</div>
-                    <div class="name-stars">
-                        <h3>Chris White</h3>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-                <p class="review-text">
-                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
-                </p>
-            </div>
-            <div class="review-card">
-                <div class="card-header">
-                    <div class="circle">F</div>
-                    <div class="name-stars">
-                        <h3>Anna Green</h3>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-                <p class="review-text">
-                    "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni."
-                </p>
-            </div>
-            <div class="review-card">
-                <div class="card-header">
-                    <div class="circle">G</div>
-                    <div class="name-stars">
-                        <h3>James Black</h3>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-                <p class="review-text">
-                    "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
-                </p>
-            </div>
-            <div class="review-card">
-                <div class="card-header">
-                    <div class="circle">H</div>
-                    <div class="name-stars">
-                        <h3>Susan Blue</h3>
-                        <div class="stars">★★★★★</div>
-                    </div>
-                </div>
-                <p class="review-text">
-                    "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur."
-                </p>
-            </div>
+
         </div>
     </section>
 
+    <!-- Include jQuery and Slick Carousel -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.carousel').slick({
+                slidesToShow: 3, // Number of slides to show at a time
+                slidesToScroll: 1, // Number of slides to scroll at a time
+                autoplay: true, // Enable auto-play
+                autoplaySpeed: 2000, // Speed of auto-play
+                infinite: true, // Infinite looping
+                speed: 500, // Animation speed
+                arrows: false, // Hide navigation arrows
+                responsive: [
+                    {
+                        breakpoint: 768, // Mobile view
+                        settings: {
+                            slidesToShow: 1, // Show 1 slide on mobile
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
 </body>
 </html>
-
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.reviews-section {
-    text-align: center;
-    padding: 20px;
-}
-
-.google-heading {
-    font-size: 24px;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-/* Google's Original Colors */
-.g-blue {
-    color: #4285F4;
-}
-.o-red {
-    color: #EA4335;
-}
-.o-yellow {
-    color: #FBBC05;
-}
-.l-green {
-    color: #34A853;
-}
-.e-red {
-    color: #EA4335;
-}
-
-.reviews-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.review-card {
-    background: linear-gradient(145deg, #ffffff, #e0f7ff);
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    max-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.review-card:hover {
-    transform: translateY(-5px);
-}
-
-.card-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #007bff;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    margin-right: 15px;
-}
-
-.name-stars {
-    text-align: left;
-}
-
-.name-stars h3 {
-    margin: 0;
-    font-size: 18px;
-}
-
-.stars {
-    color: #ffcd3c;
-    font-size: 18px;
-}
-
-.review-text {
-    font-size: 14px;
-    color: #333;
-}
-
-/* Mobile alignment */
-@media screen and (max-width: 768px) {
-    .reviews-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .review-card {
-        width: 90%;
-        max-width: 100%;
-    }
-}
-
-</style>

@@ -405,44 +405,47 @@ button[type="button"] {
 	<button onclick="showImages('images4')">Customized Sofas</button>
 	<button onclick="showImages('images5')">Customized Curtains</button>
 	
-	<button class="animated-button" onclick="showImages('images6')"><spam style="background-color: white; color:#000000; border-radius: 20px; p-5">Customer Reviews</spam></button>
+	
+	<button class="animated-button" onclick="showImages('images6')"><spam style="background-color: white; color:#000000; border-radius: 20px; p-5"><h2 class="google-heading">
+		<span class="g-blue">G</span>
+		<span class="o-red">o</span>
+		<span class="o-yellow">o</span>
+		<span class="g-blue">g</span>
+		<span class="l-green">l</span>
+		<span class="e-red">e</span>
+		<spam class="text-white">Reviews</spam>
+	</h2></spam></button>
 </div>
 <style>
 	.animated-button {
-    background-color: #4285F4; /* Google Blue */
+    /* Google Blue */
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 10px;
     border-radius: 5px;
     cursor: pointer;
     outline: none;
-    animation: blink 1.5s infinite, shake 1s infinite alternate;
-    transition: transform 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    animation: heartbeat 1s infinite;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* Blinking effect */
-@keyframes blink {
-    0%, 50%, 100% {
-        opacity: 1;
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
     }
-    25%, 75% {
-        opacity: 0.5;
+    50% {
+        transform: scale(1.1);
     }
-}
-
-/* Shaking effect */
-@keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
 }
 
 .animated-button:hover {
-    transform: scale(1.1); /* Slightly increases size on hover */
+    background-color: blue; /* Google Green */
+    transform: scale(1.1); /* Optional: Enhance the hover effect */
 }
+
 
 </style>
 <div class="image-gallery container">
